@@ -21,10 +21,7 @@ module.exports = function startup(options, imports, register) {
             },
 
             addStatics: function(statics) {
-
                 statics.forEach(function(s) {
-
-//                    console.log("MOUNT", prefix, s.mount, s.path);
                     
                     if (s.router) {
                         var server = connect.static(s.path);
