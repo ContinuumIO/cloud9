@@ -29,13 +29,10 @@ var debugPort = argv.b || process.env.DEBUG_PORT || 5858;
 
 var useAuth = argv.username && argv.password;
 
-// var workerPrefix = "http://wakari-static.s3.amazonaws.com/apps/c9_worker/c9_worker_build";
-var workerPrefix = "/static";
-// var workerPrefix = "http://wakari-static.s3.amazonaws.com/apps/c9";
-var staticPrefix = "http://wakari-static.s3.amazonaws.com/apps/c9";
-// var prefix = "/static";
+var urlPrefix = argv['url-prefix'];
 
-var urlPrefix = '/user/project/c9';
+var workerPrefix = "/static";
+var staticPrefix = "http://wakari-static.s3.amazonaws.com/apps/c9";
 
 var smithIoPrefix = urlPrefix + "/smith.io-ide";
 var fsUrl = urlPrefix + "/workspace";
