@@ -5,3 +5,6 @@ package:
 requirements:
     build: ['nodejs']
     run: ['nodejs']
+
+about:
+  home: https://github.com/ContinuumIO/cloud9
