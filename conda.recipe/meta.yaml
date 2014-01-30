@@ -8,5 +8,8 @@ requirements:
     run:
       - node 0.8.7
 
+build:
+  number: 1
+  
 about:
   home: https://github.com/ContinuumIO/cloud9
