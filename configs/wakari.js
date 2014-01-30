@@ -26,6 +26,7 @@ var vfsUrl = "/vfs";
 var port = argv.p || process.env.PORT || 3131;
 var host = argv.l || process.env.IP || "localhost";
 var debugPort = argv.b || process.env.DEBUG_PORT || 5858;
+var sessionsPath = argv['sessions-path'] || path.resolve(projectDir, '.sessions', process.env.USER || 'anon');
 
 var useAuth = argv.username && argv.password;
 
@@ -37,10 +38,10 @@ var staticPrefix = "http://wakari-static.s3.amazonaws.com/apps/c9";
 var smithIoPrefix = urlPrefix + "/smith.io-ide";
 var fsUrl = urlPrefix + "/workspace";
 
-console.log('workerPrefix', workerPrefix);
-console.log('prefix      ', staticPrefix);
-console.log('urlPrefix   ', urlPrefix);
-
+console.log('workerPrefix ', workerPrefix);
+console.log('prefix       ', staticPrefix);
+console.log('urlPrefix    ', urlPrefix);
+console.log('sessionsPath ', sessionsPath);
 
 var config = [
     {
@@ -188,7 +189,7 @@ var config = [
     },
     {
         packagePath: "./connect.session.file",
-        sessionsPath: __dirname + "/../.sessions",
+        sessionsPath: sessionsPath,
         maxAge: 7 * 24 * 60 * 60 * 1000
     },
     "./cloud9.permissions",
