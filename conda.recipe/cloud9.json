@@ -1,5 +1,5 @@
 {"name":"cloud9", "title": "Cloud9 Editor",
-    "command_list":["POST_INSTALL_ENV_PLACEHOLDER/bin/cloud9", 
+    "command_list":["POST_INSTALL_ENV_PLACEHOLDER/lib/node_modules/cloud9/bin/cloud9.sh", 
                     "wakari",
                     "--url-prefix", "%(urlPrefix)s",
                     "-w", "%(projectHome)s",
