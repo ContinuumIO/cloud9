@@ -4,9 +4,9 @@ package:
 
 requirements:
     build: 
-      - node=0.8
+      - node=0.8.7
     run:
-      - node=0.8
+      - node=0.8.7
 
 about:
   home: https://github.com/ContinuumIO/cloud9
